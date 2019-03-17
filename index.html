@@ -1,0 +1,226 @@
+
+
+<html>
+  <head>
+    <style>
+      @font-face {
+	  font-family: Inconsolata;
+	  src: url("/static/fonts/Inconsolata/Inconsolata-Regular.2c22fca2e662.ttf");
+      }
+      :root {
+	  --post-text-color: black;
+      }
+      #post table { font-size: 40px; }
+      .title { font-size: 45px; }
+      .total { font-size: 45px; }
+    </style>
+    <link rel="stylesheet" href="/static/css/fontawesome.v5.7.2.min.79b04a564b5f.css">
+    <link rel="stylesheet" href="/static/css/instagram_post.e866fcec79e2.css">
+  </head>
+  <body>
+    <div id="post">
+      <img src="/2019-03-16/photo/"
+	   style="opacity:0.4"></img>
+      <div id="content">
+	<table>
+	  <tr class="title">
+	    <td colspan="3">
+	      Mar 16, 2019
+	    </td>
+	  </tr>
+	  <tr class="title">
+	    <td colspan="3">
+	      Bangkok, Thailand
+	    </td>
+	  </tr>
+	  
+	  <tr>
+	    <td class="expense-icon">
+	      <i class="fas fa-utensils"></i>
+	    </td>
+	    <td class="expense-desc">
+	      Iced coffee (x2)
+	    </td>
+	    <td class="expense-amount">
+	      &#3647;120.00
+	    </td>
+	  </tr>
+	  
+	  <tr>
+	    <td class="expense-icon">
+	      <i class="fas fa-glass-cheers"></i>
+	    </td>
+	    <td class="expense-desc">
+	      Thai massage
+	    </td>
+	    <td class="expense-amount">
+	      &#3647;120.00
+	    </td>
+	  </tr>
+	  
+	  <tr>
+	    <td class="expense-icon">
+	      <i class="fas fa-bus"></i>
+	    </td>
+	    <td class="expense-desc">
+	      Taxi (shared)
+	    </td>
+	    <td class="expense-amount">
+	      &#3647;90.00
+	    </td>
+	  </tr>
+	  
+	  <tr>
+	    <td class="expense-icon">
+	      <i class="fas fa-utensils"></i>
+	    </td>
+	    <td class="expense-desc">
+	      Market snacks
+	    </td>
+	    <td class="expense-amount">
+	      &#3647;30.00
+	    </td>
+	  </tr>
+	  
+	  <tr>
+	    <td class="expense-icon">
+	      <i class="fas fa-camera"></i>
+	    </td>
+	    <td class="expense-desc">
+	      Boat tour
+	    </td>
+	    <td class="expense-amount">
+	      &#3647;100.00
+	    </td>
+	  </tr>
+	  
+	  <tr>
+	    <td class="expense-icon">
+	      <i class="fas fa-utensils"></i>
+	    </td>
+	    <td class="expense-desc">
+	      Lunch
+	    </td>
+	    <td class="expense-amount">
+	      &#3647;30.00
+	    </td>
+	  </tr>
+	  
+	  <tr>
+	    <td class="expense-icon">
+	      <i class="fas fa-shopping-cart"></i>
+	    </td>
+	    <td class="expense-desc">
+	      Bottled water (x2)
+	    </td>
+	    <td class="expense-amount">
+	      &#3647;20.00
+	    </td>
+	  </tr>
+	  
+	  <tr>
+	    <td class="expense-icon">
+	      <i class="fas fa-bus"></i>
+	    </td>
+	    <td class="expense-desc">
+	      Taxi
+	    </td>
+	    <td class="expense-amount">
+	      &#3647;180.00
+	    </td>
+	  </tr>
+	  
+	  <tr>
+	    <td class="expense-icon">
+	      <i class="fas fa-utensils"></i>
+	    </td>
+	    <td class="expense-desc">
+	      Snacks for the train
+	    </td>
+	    <td class="expense-amount">
+	      &#3647;50.00
+	    </td>
+	  </tr>
+	  
+	  <tr>
+	    <td class="expense-icon">
+	      <i class="fas fa-bus"></i>
+	    </td>
+	    <td class="expense-desc">
+	      Taxi
+	    </td>
+	    <td class="expense-amount">
+	      &#3647;122.00
+	    </td>
+	  </tr>
+	  
+	  <tr>
+	    <td class="expense-icon">
+	      <i class="fas fa-utensils"></i>
+	    </td>
+	    <td class="expense-desc">
+	      Street food dinner
+	    </td>
+	    <td class="expense-amount">
+	      &#3647;50.00
+	    </td>
+	  </tr>
+	  
+	  <tr>
+	    <td class="expense-icon">
+	      <i class="fas fa-bus"></i>
+	    </td>
+	    <td class="expense-desc">
+	      Night train to Surat Thani
+	    </td>
+	    <td class="expense-amount">
+	      &#3647;968.00
+	    </td>
+	  </tr>
+	  
+	</table>
+	<table>
+	  <tr class="total">
+	    <td class="expense-desc">TOTAL</td>
+	    <td class="expense-amount">&#3647;1880.0</td>
+	  </tr>
+	  <tr class="total">
+	    <td class="expense-desc">TOTAL (US$)</td>
+	    <td class="expense-amount">
+	      $59.43
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </div>
+    
+    <button id="generate_image" onclick="generateImage()">
+      Generate image
+    </button>
+    <div id="post_image"></div>
+    <script type="text/javascript" src="/static/js/html2canvas.min.3c999fbc2f28.js">
+    </script>
+    <script type="text/javascript">
+      // Center table vertically.
+      var height = document.getElementById('content').clientHeight;
+      var marginTop = parseInt((1020 - height) / 2) + "px";
+      document.getElementById('content').style.marginTop = marginTop;
+      // Render to image.
+      function generateImage() {
+	  html2canvas(document.getElementById("post"), {
+	      allowTaint: false,
+              logging: true,
+              useCORS: true
+          }).then(canvas => {
+	      var canvasImgSrc = canvas.toDataURL("image/png");
+	      console.log('Here');
+	      console.log(document.getElementById('post_image').innerHTML);
+	      document.getElementById('post_image').innerHTML =
+		  '<img src="' + canvasImgSrc + '" alt="">';
+	      console.log('Here x2');
+          });
+      }
+      
+    </script>
+  </body>
+</html>
